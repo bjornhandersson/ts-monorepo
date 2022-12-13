@@ -1,10 +1,6 @@
 import * as cdk from 'aws-cdk-lib';
 import {Construct} from 'constructs';
 
-export class MyClass {
-
-}
-
 export class MyConstruct extends Construct {
     readonly vpc : cdk.aws_ec2.IVpc;
     constructor(scope: Construct, id: string){

@@ -7,6 +7,7 @@ export class MyAppA extends Construct {
     constructor(scope: Construct, id: string) {
         super(scope, id)
 
+        // Uses CDK 2.53 which have NODEJS_18_X
         fs.copy('a', 'b');
 
         const libType = new liba.MyConstruct(this, 'AppB');
