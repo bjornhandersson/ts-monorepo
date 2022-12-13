@@ -1,0 +1,16 @@
+{
+  "name": "app-a",
+  "version": "1.0.0",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "tsc": "tsc",
+    "build": "(cd ../../ && npm i && cd apps/app-a && npm run tsc)"
+  },
+  "dependencies": {
+    "@gpsgate/lib-a": "*",
+    "aws-cdk-lib": "2.53.0",
+    "constructs": "^10.1.188",
+    "fs-extra": "^11.1.0",
+    "typescript": "^4.9.4"
+  }
+}
