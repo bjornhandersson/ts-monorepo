@@ -1,16 +1,11 @@
 # Build
 ```bash
-yarn set version berry
 yarn
-yarn run tsc --build
+// Build all
+yarn tsc --build
 ```
 
 # Workspaces
-List workspaces
-```bash
-yarn workspaces list
-```
-
 Build app-a
 ```bash
 yarn workspace app-a tsc
