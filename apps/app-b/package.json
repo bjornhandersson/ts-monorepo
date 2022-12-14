@@ -3,13 +3,18 @@
   "version": "1.0.0",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsc": "tsc",
-    "build": "(cd ../../ && npm i apps/app-b && npm run tsc)"
+    "tsc": "tsc"
   },
-  "dependencies": {
-    "typescript": "^4.9.4",
-    "@gpsgate/lib-a": "*",
+  "devDependencies": {
+    "@gpsgate/shared": "^1.0.0",
+    "@types/jest": "^27.0.1",
+    "@typescript-eslint/eslint-plugin": "^4.29.2",
+    "@typescript-eslint/parser": "^4.29.2",
     "aws-cdk-lib": "2.45.0",
-    "constructs": "^10.1.188"
+    "constructs": "^10.1.188",
+    "eslint": "^7.32.0",
+    "jest": "^27.0.6",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.9.4"
   }
 }

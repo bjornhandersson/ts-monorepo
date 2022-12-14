@@ -1,5 +1,5 @@
 import * as cdk from 'aws-cdk-lib';
-import * as liba from '@gpsgate/lib-a';
+import * as ggs_common from '@gpsgate/shared';
 import { Construct } from 'constructs';
 
 export class MyAppB extends Construct {
@@ -7,9 +7,10 @@ export class MyAppB extends Construct {
         super(scope, id)
 
         // Uses CDK 2.45 which DO NOT have NODEJS_18_X
-        const libType = new liba.MyConstruct(this, 'AppB');
+        var exports = new ggs_common.CommonResources(scope);
+        const vpc = exports.getDefaultVpc();
         const func = new cdk.aws_lambda.Function(this, 'AppAFunction', {
-            vpc: libType.vpc,
+            vpc: vpc,
             runtime: cdk.aws_lambda.Runtime.NODEJS_16_X,
             handler: 'index.handler',
             code: cdk.aws_lambda.Code.fromInline(`

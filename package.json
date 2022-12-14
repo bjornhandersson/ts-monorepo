@@ -1,10 +1,11 @@
 {
+  "private": true,
   "name": "monorepo",
-  "version": "1.0.0",
+  "packageManager": "yarn@3.3.0",
   "workspaces": {
     "packages": [
-      "./apps/*",
-      "./packages/*"
+      "packages/*",
+      "apps/*"
     ]
   },
   "devDependencies": {
